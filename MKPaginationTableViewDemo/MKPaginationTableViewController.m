@@ -41,13 +41,7 @@
         [newIndexPaths addObject:[NSIndexPath indexPathForRow: i inSection:0]];
     }
     self.visibleItems = [[self.visibleItems mutableCopy] arrayByAddingObjectsFromArray:newItems];
-    
-    [self.tableView beginUpdates];
-    if(newFerstRow > 0 ){
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow: newFerstRow-1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-    }
     [self.tableView insertRowsAtIndexPaths:newIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
-    [self.tableView endUpdates];
     self.timer = nil;
 }
 
