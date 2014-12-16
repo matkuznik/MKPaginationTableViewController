@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6111EAC51A40238500B434E4 /* PaginationTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6111EAC41A40238500B434E4 /* PaginationTableViewModel.m */; };
+		61AADE491A40287C0050C51E /* MKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AADE481A40287C0050C51E /* MKTest.m */; };
 		61BD0BE51A30DBCC008B5EC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BE41A30DBCC008B5EC2 /* main.m */; };
 		61BD0BE81A30DBCC008B5EC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BE71A30DBCC008B5EC2 /* AppDelegate.m */; };
 		61BD0BEE1A30DBCC008B5EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61BD0BEC1A30DBCC008B5EC2 /* Main.storyboard */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6111EAC31A40238500B434E4 /* PaginationTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaginationTableViewModel.h; sourceTree = "<group>"; };
+		6111EAC41A40238500B434E4 /* PaginationTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaginationTableViewModel.m; sourceTree = "<group>"; };
+		61AADE481A40287C0050C51E /* MKTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTest.m; sourceTree = "<group>"; };
 		61BD0BDF1A30DBCC008B5EC2 /* MKPaginationTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKPaginationTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD0BE31A30DBCC008B5EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61BD0BE41A30DBCC008B5EC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +90,8 @@
 				61BD0BE71A30DBCC008B5EC2 /* AppDelegate.m */,
 				61BD0C0D1A30E990008B5EC2 /* MKPaginationTableViewController.h */,
 				61BD0C0E1A30E990008B5EC2 /* MKPaginationTableViewController.m */,
+				6111EAC31A40238500B434E4 /* PaginationTableViewModel.h */,
+				6111EAC41A40238500B434E4 /* PaginationTableViewModel.m */,
 				61BD0BEC1A30DBCC008B5EC2 /* Main.storyboard */,
 				61BD0BEF1A30DBCC008B5EC2 /* Images.xcassets */,
 				61BD0BF11A30DBCC008B5EC2 /* LaunchScreen.xib */,
@@ -105,6 +112,7 @@
 		61BD0BFB1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				61AADE481A40287C0050C51E /* MKTest.m */,
 				61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */,
 				61BD0BFC1A30DBCC008B5EC2 /* Supporting Files */,
 			);
@@ -222,6 +230,7 @@
 				61BD0BE81A30DBCC008B5EC2 /* AppDelegate.m in Sources */,
 				61BD0BE51A30DBCC008B5EC2 /* main.m in Sources */,
 				61BD0C0F1A30E990008B5EC2 /* MKPaginationTableViewController.m in Sources */,
+				6111EAC51A40238500B434E4 /* PaginationTableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61BD0BFF1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m in Sources */,
+				61AADE491A40287C0050C51E /* MKTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MKPaginationTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MKPaginationTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +424,7 @@
 				61BD0C041A30DBCC008B5EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61BD0C051A30DBCC008B5EC2 /* Build configuration list for PBXNativeTarget "MKPaginationTableViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				61BD0C071A30DBCC008B5EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

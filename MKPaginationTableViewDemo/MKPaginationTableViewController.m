@@ -7,49 +7,44 @@
 //
 
 #import "MKPaginationTableViewController.h"
-
 @interface MKPaginationTableViewController()
 
-@property (nonatomic, strong)NSArray *visibleItems;
-@property(nonatomic,strong) NSTimer *timer;
+@property(nonatomic,strong)PaginationTableViewModel *viewModel;
 
 @end
 
 @implementation MKPaginationTableViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupViewModel: nil];
+}
+
+- (void)setupViewModel:(PaginationTableViewModel *)viewModel {
+    if(!viewModel) {
+        viewModel = [[PaginationTableViewModel alloc] init];
+    }
+    _viewModel = viewModel;
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self setupData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewItems) name:@"NewItems" object:nil];
+    [self.viewModel loadMoreItems];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.timer invalidate];
-    self.timer = nil;
+    [self.viewModel invalidateTimer];
 }
 
-- (void)setupData {
-    self.visibleItems = [NSArray array];
-    [self addTenItemsToArray];
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)addTenItemsToArray {
-    NSMutableArray *newItems = [NSMutableArray array];
-    NSMutableArray *newIndexPaths = [NSMutableArray array];
-    NSInteger newFerstRow = [self.visibleItems count];
-    for (NSInteger i = newFerstRow; i<newFerstRow + 10; i++) {
-        [newItems addObject:[@(arc4random() % 1000) stringValue ]];
-        [newIndexPaths addObject:[NSIndexPath indexPathForRow: i inSection:0]];
+- (void)addNewItems {
+    if(self.viewModel.addedIndexPaths.count) {
+        [self.tableView insertRowsAtIndexPaths:self.viewModel.addedIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
     }
-    self.visibleItems = [[self.visibleItems mutableCopy] arrayByAddingObjectsFromArray:newItems];
-    [self.tableView insertRowsAtIndexPaths:newIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
-    self.timer = nil;
-}
-
-- (void)loadMoreItems {
-    if(self.timer) {
-        return;
-    }
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(addTenItemsToArray) userInfo:nil repeats:NO];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -57,17 +52,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.visibleItems count];
+    return [self.viewModel.visibleItems count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellReusableId" forIndexPath:indexPath];
     
     cell.textLabel.text = @"Some random number";
-    cell.detailTextLabel.text = self.visibleItems[indexPath.row];
+    cell.detailTextLabel.text = self.viewModel.visibleItems[indexPath.row];
     
-    if([self.visibleItems count]-1 == indexPath.row) {
-        [self loadMoreItems];
+    if([self.viewModel.visibleItems count]-1 == indexPath.row) {
+        [self.viewModel loadMoreItems];
     }
     
     return cell;
