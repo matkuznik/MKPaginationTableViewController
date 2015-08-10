@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PaginationTableViewModel : NSObject
+@interface MKPaginationTableViewModel : NSObject
 
 @property (nonatomic, strong, readonly)NSArray *visibleItems;
 @property (nonatomic, strong) NSArray *addedIndexPaths;
 
 - (void)loadMoreItems;
+
 - (void)invalidateTimer;
 
 @end

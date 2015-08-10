@@ -9,7 +9,7 @@
 #import "MKPaginationTableViewController.h"
 @interface MKPaginationTableViewController()
 
-@property(nonatomic,strong)PaginationTableViewModel *viewModel;
+@property(nonatomic,strong) MKPaginationTableViewModel *viewModel;
 
 @end
 
@@ -20,9 +20,9 @@
     [self setupViewModel: nil];
 }
 
-- (void)setupViewModel:(PaginationTableViewModel *)viewModel {
+- (void)setupViewModel:(MKPaginationTableViewModel *)viewModel {
     if(!viewModel) {
-        viewModel = [[PaginationTableViewModel alloc] init];
+        viewModel = [[MKPaginationTableViewModel alloc] init];
     }
     _viewModel = viewModel;
 }

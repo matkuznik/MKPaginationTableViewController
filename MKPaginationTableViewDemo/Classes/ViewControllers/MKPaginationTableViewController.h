@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PaginationTableViewModel.h"
+#import "MKPaginationTableViewModel.h"
 
 @interface MKPaginationTableViewController : UITableViewController
 
-- (void)setupViewModel:(PaginationTableViewModel *)viewModel;
+- (void)setupViewModel:(MKPaginationTableViewModel *)viewModel;
 
 @end

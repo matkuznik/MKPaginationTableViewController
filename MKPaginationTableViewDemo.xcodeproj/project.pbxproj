@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6111EAC51A40238500B434E4 /* PaginationTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6111EAC41A40238500B434E4 /* PaginationTableViewModel.m */; };
-		61AADE491A40287C0050C51E /* MKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AADE481A40287C0050C51E /* MKTest.m */; };
-		61BD0BE51A30DBCC008B5EC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BE41A30DBCC008B5EC2 /* main.m */; };
-		61BD0BE81A30DBCC008B5EC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BE71A30DBCC008B5EC2 /* AppDelegate.m */; };
-		61BD0BEE1A30DBCC008B5EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61BD0BEC1A30DBCC008B5EC2 /* Main.storyboard */; };
-		61BD0BF01A30DBCC008B5EC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BD0BEF1A30DBCC008B5EC2 /* Images.xcassets */; };
-		61BD0BF31A30DBCC008B5EC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BD0BF11A30DBCC008B5EC2 /* LaunchScreen.xib */; };
+		321FA3CD633D977A4A323974 /* MKPaginationTableViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321FA4E8534FF161A4B94B1B /* MKPaginationTableViewModelTests.m */; };
+		6180A3E11B78B07C0053BB88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3D21B78B07C0053BB88 /* AppDelegate.m */; };
+		6180A3E21B78B07C0053BB88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3D31B78B07C0053BB88 /* LaunchScreen.xib */; };
+		6180A3E31B78B07C0053BB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3D41B78B07C0053BB88 /* Main.storyboard */; };
+		6180A3E41B78B07C0053BB88 /* MKPaginationTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3D81B78B07C0053BB88 /* MKPaginationTableViewModel.m */; };
+		6180A3E51B78B07C0053BB88 /* MKPaginationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3DB1B78B07C0053BB88 /* MKPaginationTableViewController.m */; };
+		6180A3E61B78B07C0053BB88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3DC1B78B07C0053BB88 /* main.m */; };
+		6180A3E71B78B07C0053BB88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3DE1B78B07C0053BB88 /* Images.xcassets */; };
+		6180A3E81B78B07C0053BB88 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3E01B78B07C0053BB88 /* Info.plist */; };
 		61BD0BFF1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */; };
-		61BD0C0F1A30E990008B5EC2 /* MKPaginationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0C0E1A30E990008B5EC2 /* MKPaginationTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,22 +30,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6111EAC31A40238500B434E4 /* PaginationTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaginationTableViewModel.h; sourceTree = "<group>"; };
-		6111EAC41A40238500B434E4 /* PaginationTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaginationTableViewModel.m; sourceTree = "<group>"; };
-		61AADE481A40287C0050C51E /* MKTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKTest.m; sourceTree = "<group>"; };
+		321FA4E8534FF161A4B94B1B /* MKPaginationTableViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewModelTests.m; sourceTree = "<group>"; };
+		6180A3D11B78B07C0053BB88 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6180A3D21B78B07C0053BB88 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6180A3D31B78B07C0053BB88 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		6180A3D41B78B07C0053BB88 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6180A3D71B78B07C0053BB88 /* MKPaginationTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPaginationTableViewModel.h; sourceTree = "<group>"; };
+		6180A3D81B78B07C0053BB88 /* MKPaginationTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewModel.m; sourceTree = "<group>"; };
+		6180A3DA1B78B07C0053BB88 /* MKPaginationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPaginationTableViewController.h; sourceTree = "<group>"; };
+		6180A3DB1B78B07C0053BB88 /* MKPaginationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewController.m; sourceTree = "<group>"; };
+		6180A3DC1B78B07C0053BB88 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6180A3DE1B78B07C0053BB88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6180A3E01B78B07C0053BB88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61BD0BDF1A30DBCC008B5EC2 /* MKPaginationTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKPaginationTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		61BD0BE31A30DBCC008B5EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61BD0BE41A30DBCC008B5EC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		61BD0BE61A30DBCC008B5EC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		61BD0BE71A30DBCC008B5EC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61BD0BED1A30DBCC008B5EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		61BD0BEF1A30DBCC008B5EC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		61BD0BF21A30DBCC008B5EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		61BD0BF81A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKPaginationTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD0BFD1A30DBCC008B5EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewDemoTests.m; sourceTree = "<group>"; };
-		61BD0C0D1A30E990008B5EC2 /* MKPaginationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPaginationTableViewController.h; sourceTree = "<group>"; };
-		61BD0C0E1A30E990008B5EC2 /* MKPaginationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6180A3D01B78B07C0053BB88 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6180A3D11B78B07C0053BB88 /* AppDelegate.h */,
+				6180A3D21B78B07C0053BB88 /* AppDelegate.m */,
+				6180A3D31B78B07C0053BB88 /* LaunchScreen.xib */,
+				6180A3D41B78B07C0053BB88 /* Main.storyboard */,
+				6180A3D51B78B07C0053BB88 /* Models */,
+				6180A3D91B78B07C0053BB88 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6180A3D51B78B07C0053BB88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6180A3D61B78B07C0053BB88 /* ViewModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6180A3D61B78B07C0053BB88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6180A3D71B78B07C0053BB88 /* MKPaginationTableViewModel.h */,
+				6180A3D81B78B07C0053BB88 /* MKPaginationTableViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6180A3D91B78B07C0053BB88 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6180A3DA1B78B07C0053BB88 /* MKPaginationTableViewController.h */,
+				6180A3DB1B78B07C0053BB88 /* MKPaginationTableViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6180A3DD1B78B07C0053BB88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6180A3DE1B78B07C0053BB88 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6180A3DF1B78B07C0053BB88 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6180A3E01B78B07C0053BB88 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		61BD0BD61A30DBCC008B5EC2 = {
 			isa = PBXGroup;
 			children = (
@@ -86,35 +142,20 @@
 		61BD0BE11A30DBCC008B5EC2 /* MKPaginationTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				61BD0BE61A30DBCC008B5EC2 /* AppDelegate.h */,
-				61BD0BE71A30DBCC008B5EC2 /* AppDelegate.m */,
-				61BD0C0D1A30E990008B5EC2 /* MKPaginationTableViewController.h */,
-				61BD0C0E1A30E990008B5EC2 /* MKPaginationTableViewController.m */,
-				6111EAC31A40238500B434E4 /* PaginationTableViewModel.h */,
-				6111EAC41A40238500B434E4 /* PaginationTableViewModel.m */,
-				61BD0BEC1A30DBCC008B5EC2 /* Main.storyboard */,
-				61BD0BEF1A30DBCC008B5EC2 /* Images.xcassets */,
-				61BD0BF11A30DBCC008B5EC2 /* LaunchScreen.xib */,
-				61BD0BE21A30DBCC008B5EC2 /* Supporting Files */,
+				6180A3D01B78B07C0053BB88 /* Classes */,
+				6180A3DC1B78B07C0053BB88 /* main.m */,
+				6180A3DD1B78B07C0053BB88 /* Resources */,
+				6180A3DF1B78B07C0053BB88 /* SupportingFiles */,
 			);
 			path = MKPaginationTableViewDemo;
-			sourceTree = "<group>";
-		};
-		61BD0BE21A30DBCC008B5EC2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				61BD0BE31A30DBCC008B5EC2 /* Info.plist */,
-				61BD0BE41A30DBCC008B5EC2 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		61BD0BFB1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				61AADE481A40287C0050C51E /* MKTest.m */,
 				61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */,
 				61BD0BFC1A30DBCC008B5EC2 /* Supporting Files */,
+				321FA4E8534FF161A4B94B1B /* MKPaginationTableViewModelTests.m */,
 			);
 			path = MKPaginationTableViewDemoTests;
 			sourceTree = "<group>";
@@ -207,9 +248,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61BD0BEE1A30DBCC008B5EC2 /* Main.storyboard in Resources */,
-				61BD0BF31A30DBCC008B5EC2 /* LaunchScreen.xib in Resources */,
-				61BD0BF01A30DBCC008B5EC2 /* Images.xcassets in Resources */,
+				6180A3E81B78B07C0053BB88 /* Info.plist in Resources */,
+				6180A3E71B78B07C0053BB88 /* Images.xcassets in Resources */,
+				6180A3E21B78B07C0053BB88 /* LaunchScreen.xib in Resources */,
+				6180A3E31B78B07C0053BB88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,10 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61BD0BE81A30DBCC008B5EC2 /* AppDelegate.m in Sources */,
-				61BD0BE51A30DBCC008B5EC2 /* main.m in Sources */,
-				61BD0C0F1A30E990008B5EC2 /* MKPaginationTableViewController.m in Sources */,
-				6111EAC51A40238500B434E4 /* PaginationTableViewModel.m in Sources */,
+				6180A3E11B78B07C0053BB88 /* AppDelegate.m in Sources */,
+				6180A3E41B78B07C0053BB88 /* MKPaginationTableViewModel.m in Sources */,
+				6180A3E61B78B07C0053BB88 /* main.m in Sources */,
+				6180A3E51B78B07C0053BB88 /* MKPaginationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61BD0BFF1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m in Sources */,
-				61AADE491A40287C0050C51E /* MKTest.m in Sources */,
+				321FA3CD633D977A4A323974 /* MKPaginationTableViewModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,25 +294,6 @@
 			targetProxy = 61BD0BF91A30DBCC008B5EC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		61BD0BEC1A30DBCC008B5EC2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61BD0BED1A30DBCC008B5EC2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		61BD0BF11A30DBCC008B5EC2 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61BD0BF21A30DBCC008B5EC2 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		61BD0C001A30DBCC008B5EC2 /* Debug */ = {
