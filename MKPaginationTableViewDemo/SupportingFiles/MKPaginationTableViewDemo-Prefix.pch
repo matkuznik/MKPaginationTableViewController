@@ -1,0 +1,14 @@
+//
+//  MKPaginationTableViewDemo-Prefix.pch
+//  MKPaginationTableViewDemo
+//
+//  Created by Mateusz Kuźnik on 10/08/15.
+//  Copyright (c) 2015 Mateusz Kuznik. All rights reserved.
+//
+
+#ifndef MKPaginationTableViewDemo_MKPaginationTableViewDemo_Prefix_pch
+#define MKPaginationTableViewDemo_MKPaginationTableViewDemo_Prefix_pch
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+#endif

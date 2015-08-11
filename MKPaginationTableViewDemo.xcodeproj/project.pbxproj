@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		321FA3CD633D977A4A323974 /* MKPaginationTableViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321FA4E8534FF161A4B94B1B /* MKPaginationTableViewModelTests.m */; };
+		321FAD0E62FEFC0E0DF9EB8B /* MKSchedulerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 321FADC41E170D9D7FB37D90 /* MKSchedulerFactory.m */; };
+		321FAD3343E404D5B6C54008 /* MKFetchItemsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 321FA1BFA8F41B975FF75A0F /* MKFetchItemsManager.m */; };
+		55BF270064B96B9D18F31B2C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32878FA7232312C3F0386E66 /* libPods.a */; };
 		6180A3E11B78B07C0053BB88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3D21B78B07C0053BB88 /* AppDelegate.m */; };
 		6180A3E21B78B07C0053BB88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3D31B78B07C0053BB88 /* LaunchScreen.xib */; };
 		6180A3E31B78B07C0053BB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3D41B78B07C0053BB88 /* Main.storyboard */; };
@@ -17,6 +20,7 @@
 		6180A3E71B78B07C0053BB88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3DE1B78B07C0053BB88 /* Images.xcassets */; };
 		6180A3E81B78B07C0053BB88 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3E01B78B07C0053BB88 /* Info.plist */; };
 		61BD0BFF1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */; };
+		D5307D17E03BABF39254808C /* libPods-MKPaginationTableViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF9E50F64A03388CDC026DA /* libPods-MKPaginationTableViewDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321FA1BFA8F41B975FF75A0F /* MKFetchItemsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFetchItemsManager.m; sourceTree = "<group>"; };
 		321FA4E8534FF161A4B94B1B /* MKPaginationTableViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewModelTests.m; sourceTree = "<group>"; };
+		321FADC41E170D9D7FB37D90 /* MKSchedulerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSchedulerFactory.m; sourceTree = "<group>"; };
+		321FADDD6ED977477224B10B /* MKSchedulerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSchedulerFactory.h; sourceTree = "<group>"; };
+		321FADE68AC6D098733F29DD /* MKFetchItemsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFetchItemsManager.h; sourceTree = "<group>"; };
+		32878FA7232312C3F0386E66 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6180A3D11B78B07C0053BB88 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6180A3D21B78B07C0053BB88 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6180A3D31B78B07C0053BB88 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,10 +51,16 @@
 		6180A3DC1B78B07C0053BB88 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6180A3DE1B78B07C0053BB88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6180A3E01B78B07C0053BB88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6180A3EC1B78B9D40053BB88 /* MKPaginationTableViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKPaginationTableViewDemo-Prefix.pch"; sourceTree = "<group>"; };
 		61BD0BDF1A30DBCC008B5EC2 /* MKPaginationTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKPaginationTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD0BF81A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKPaginationTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD0BFD1A30DBCC008B5EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewDemoTests.m; sourceTree = "<group>"; };
+		62F1A930446EB5BBA0035AD1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7EF9E50F64A03388CDC026DA /* libPods-MKPaginationTableViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKPaginationTableViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82B767C835A4392C0CBBE1BC /* Pods-MKPaginationTableViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKPaginationTableViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKPaginationTableViewDemoTests/Pods-MKPaginationTableViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAA24B4A5533745FA78C0FB6 /* Pods-MKPaginationTableViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKPaginationTableViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MKPaginationTableViewDemoTests/Pods-MKPaginationTableViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6E16C9DCD2561E9990F917C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BF270064B96B9D18F31B2C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +76,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5307D17E03BABF39254808C /* libPods-MKPaginationTableViewDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29091E92D085ECB0C6AAA79E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32878FA7232312C3F0386E66 /* libPods.a */,
+				7EF9E50F64A03388CDC026DA /* libPods-MKPaginationTableViewDemoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		321FA002236EF08771C1C052 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				321FA1BFA8F41B975FF75A0F /* MKFetchItemsManager.m */,
+				321FADE68AC6D098733F29DD /* MKFetchItemsManager.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		321FA51F2D46EB6EAE090648 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				321FADC41E170D9D7FB37D90 /* MKSchedulerFactory.m */,
+				321FADDD6ED977477224B10B /* MKSchedulerFactory.h */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		6180A3D01B78B07C0053BB88 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +119,7 @@
 				6180A3D41B78B07C0053BB88 /* Main.storyboard */,
 				6180A3D51B78B07C0053BB88 /* Models */,
 				6180A3D91B78B07C0053BB88 /* ViewControllers */,
+				321FA002236EF08771C1C052 /* Helpers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -83,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				6180A3D61B78B07C0053BB88 /* ViewModels */,
+				321FA51F2D46EB6EAE090648 /* Factories */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				6180A3E01B78B07C0053BB88 /* Info.plist */,
+				6180A3EC1B78B9D40053BB88 /* MKPaginationTableViewDemo-Prefix.pch */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -127,6 +174,8 @@
 				61BD0BE11A30DBCC008B5EC2 /* MKPaginationTableViewDemo */,
 				61BD0BFB1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests */,
 				61BD0BE01A30DBCC008B5EC2 /* Products */,
+				8E0FF0D4E2F03B892A7D3BF1 /* Pods */,
+				29091E92D085ECB0C6AAA79E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +217,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8E0FF0D4E2F03B892A7D3BF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62F1A930446EB5BBA0035AD1 /* Pods.debug.xcconfig */,
+				D6E16C9DCD2561E9990F917C /* Pods.release.xcconfig */,
+				82B767C835A4392C0CBBE1BC /* Pods-MKPaginationTableViewDemoTests.debug.xcconfig */,
+				AAA24B4A5533745FA78C0FB6 /* Pods-MKPaginationTableViewDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61BD0C021A30DBCC008B5EC2 /* Build configuration list for PBXNativeTarget "MKPaginationTableViewDemo" */;
 			buildPhases = (
+				F5B654EA05B28477C66125DD /* Check Pods Manifest.lock */,
 				61BD0BDB1A30DBCC008B5EC2 /* Sources */,
 				61BD0BDC1A30DBCC008B5EC2 /* Frameworks */,
 				61BD0BDD1A30DBCC008B5EC2 /* Resources */,
+				CE4F3FF2030BAF3E5D3F86ED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61BD0C051A30DBCC008B5EC2 /* Build configuration list for PBXNativeTarget "MKPaginationTableViewDemoTests" */;
 			buildPhases = (
+				DA655EB1EF9F2F42CC5A1A13 /* Check Pods Manifest.lock */,
 				61BD0BF41A30DBCC008B5EC2 /* Sources */,
 				61BD0BF51A30DBCC008B5EC2 /* Frameworks */,
 				61BD0BF61A30DBCC008B5EC2 /* Resources */,
+				738EBF6C6E5671F31C04216E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +328,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		738EBF6C6E5671F31C04216E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MKPaginationTableViewDemoTests/Pods-MKPaginationTableViewDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4F3FF2030BAF3E5D3F86ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA655EB1EF9F2F42CC5A1A13 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5B654EA05B28477C66125DD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61BD0BDB1A30DBCC008B5EC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +400,8 @@
 				6180A3E41B78B07C0053BB88 /* MKPaginationTableViewModel.m in Sources */,
 				6180A3E61B78B07C0053BB88 /* main.m in Sources */,
 				6180A3E51B78B07C0053BB88 /* MKPaginationTableViewController.m in Sources */,
+				321FAD3343E404D5B6C54008 /* MKFetchItemsManager.m in Sources */,
+				321FAD0E62FEFC0E0DF9EB8B /* MKSchedulerFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,8 +503,11 @@
 		};
 		61BD0C031A30DBCC008B5EC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F1A930446EB5BBA0035AD1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/MKPaginationTableViewDemo/SupportingFiles/MKPaginationTableViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MKPaginationTableViewDemo/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -385,8 +517,11 @@
 		};
 		61BD0C041A30DBCC008B5EC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E16C9DCD2561E9990F917C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/MKPaginationTableViewDemo/SupportingFiles/MKPaginationTableViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MKPaginationTableViewDemo/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -396,6 +531,7 @@
 		};
 		61BD0C061A30DBCC008B5EC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82B767C835A4392C0CBBE1BC /* Pods-MKPaginationTableViewDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -415,6 +551,7 @@
 		};
 		61BD0C071A30DBCC008B5EC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA24B4A5533745FA78C0FB6 /* Pods-MKPaginationTableViewDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

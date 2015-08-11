@@ -7,9 +7,10 @@
 //
 
 #import "MKPaginationTableViewController.h"
-@interface MKPaginationTableViewController()
 
-@property(nonatomic,strong) MKPaginationTableViewModel *viewModel;
+@interface MKPaginationTableViewController ()
+
+@property(nonatomic, strong) MKPaginationTableViewModel *viewModel;
 
 @end
 
@@ -17,58 +18,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupViewModel: nil];
+    [self setupViewModel:nil];
+    [self setupObservers];
+    [self.viewModel loadMoreItems];
 }
 
 - (void)setupViewModel:(MKPaginationTableViewModel *)viewModel {
-    if(!viewModel) {
+    if (!viewModel) {
         viewModel = [[MKPaginationTableViewModel alloc] init];
     }
     _viewModel = viewModel;
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewItems) name:@"NewItems" object:nil];
-    [self.viewModel loadMoreItems];
+- (void)setupObservers {
+    @weakify(self)
+    [[RACObserve(self.viewModel, indexPathsToAdd)
+            deliverOn:[RACScheduler mainThreadScheduler]]
+            subscribeNext:^(NSArray *indexPathsToAdd) {
+                @strongify(self)
+                if (indexPathsToAdd.count) {
+                    [self.tableView insertRowsAtIndexPaths:indexPathsToAdd withRowAnimation:UITableViewRowAnimationBottom];
+                    self.viewModel.indexPathsToAdd = nil;
+                }
+            }];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.viewModel invalidateTimer];
-}
-
-- (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)addNewItems {
-    if(self.viewModel.addedIndexPaths.count) {
-        [self.tableView insertRowsAtIndexPaths:self.viewModel.addedIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
-    }
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.viewModel.visibleItems count];
+    return [self.viewModel numberOfRowsInSection:section];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellReusableId" forIndexPath:indexPath];
-    
+
     cell.textLabel.text = @"Some random number";
-    cell.detailTextLabel.text = self.viewModel.visibleItems[indexPath.row];
-    
-    if([self.viewModel.visibleItems count]-1 == indexPath.row) {
+    cell.detailTextLabel.text = [self.viewModel textForRowAtIndexPath:indexPath];
+
+    NSInteger numberOfItems = [self.viewModel numberOfRowsInSection:indexPath.section];
+    if (numberOfItems == 0 || numberOfItems - 1 == indexPath.row) {
         [self.viewModel loadMoreItems];
     }
-    
+
     return cell;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     return @"Loading new items ...";
 }
 @end

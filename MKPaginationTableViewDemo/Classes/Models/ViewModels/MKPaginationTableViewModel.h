@@ -10,11 +10,12 @@
 
 @interface MKPaginationTableViewModel : NSObject
 
-@property (nonatomic, strong, readonly)NSArray *visibleItems;
-@property (nonatomic, strong) NSArray *addedIndexPaths;
+@property(nonatomic, strong) NSArray *indexPathsToAdd;
 
 - (void)loadMoreItems;
 
-- (void)invalidateTimer;
+- (NSInteger)numberOfRowsInSection:(NSInteger)section;
+
+- (NSString *)textForRowAtIndexPath:(NSIndexPath *)path;
 
 @end

@@ -6,14 +6,15 @@
 //  Copyright (c) 2014 Mateusz Kuznik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "MKPaginationTableViewModel.h"
+#import "MKFetchItemsManager.h"
 
 @interface MKPaginationTableViewModel ()
 
+@property(nonatomic, strong) MKFetchItemsManager *fetchItemsManager;
 @property(nonatomic, strong, readwrite) NSArray *visibleItems;
-@property(nonatomic, strong) NSTimer *timer;
 
+@property(nonatomic) BOOL isItemsLoading;
 @end
 
 @implementation MKPaginationTableViewModel
@@ -26,34 +27,45 @@
 }
 
 - (void)setupData {
+    self.fetchItemsManager = [[MKFetchItemsManager alloc] init];
     self.visibleItems = [NSArray array];
-    [self addTenItemsToArray];
 }
 
 - (void)loadMoreItems {
-    if (self.timer) {
+    if (self.isItemsLoading) {
         return;
     }
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(addTenItemsToArray) userInfo:nil repeats:NO];
+    self.isItemsLoading = YES;
+    @weakify(self)
+    [[self.fetchItemsManager fetchItems]
+            subscribeNext:^(NSArray *itemsToAdd) {
+                @strongify(self)
+                [self addItemsToDataSource:itemsToAdd];
+                self.isItemsLoading = NO;
+            }];
 }
 
-- (void)addTenItemsToArray {
-    NSMutableArray *newItems = [NSMutableArray array];
-    NSMutableArray *newIndexPaths = [NSMutableArray array];
-    NSInteger newFirstRow = [self.visibleItems count];
-    for (NSInteger i = newFirstRow; i < newFirstRow + 10; i++) {
-        [newItems addObject:[@(arc4random() % 1000) stringValue]];
-        [newIndexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+- (void)addItemsToDataSource:(NSArray *)items {
+    if (items.count) {
+        NSUInteger firstRowToAdd = self.visibleItems.count;
+        self.visibleItems = [self.visibleItems arrayByAddingObjectsFromArray:items];
+        NSUInteger lastRowToAdd = self.visibleItems.count - 1;
+        NSMutableArray *indexToAdd = [NSMutableArray array];
+        for (NSInteger index = firstRowToAdd; index <= lastRowToAdd; index++) {
+            [indexToAdd addObject:[NSIndexPath indexPathForItem:index inSection:0]];
+        }
+        self.indexPathsToAdd = indexToAdd;
     }
-    self.visibleItems = [[self.visibleItems mutableCopy] arrayByAddingObjectsFromArray:newItems];
-    self.addedIndexPaths = newIndexPaths;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewItems" object:nil];
-    [self invalidateTimer];
 }
 
-- (void)invalidateTimer {
-    [self.timer invalidate];
-    self.timer = nil;
+#pragma mark - Data Source
+
+- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+    return self.visibleItems.count;
+}
+
+- (NSString *)textForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.visibleItems[(NSUInteger) indexPath.row];
 }
 
 @end
