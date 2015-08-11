@@ -13,8 +13,8 @@
 
 @property(nonatomic, strong) MKFetchItemsManager *fetchItemsManager;
 @property(nonatomic, strong, readwrite) NSArray *visibleItems;
-
 @property(nonatomic) BOOL isItemsLoading;
+
 @end
 
 @implementation MKPaginationTableViewModel

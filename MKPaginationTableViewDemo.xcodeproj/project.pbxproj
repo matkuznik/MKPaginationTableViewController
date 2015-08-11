@@ -18,7 +18,6 @@
 		6180A3E51B78B07C0053BB88 /* MKPaginationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3DB1B78B07C0053BB88 /* MKPaginationTableViewController.m */; };
 		6180A3E61B78B07C0053BB88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180A3DC1B78B07C0053BB88 /* main.m */; };
 		6180A3E71B78B07C0053BB88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3DE1B78B07C0053BB88 /* Images.xcassets */; };
-		6180A3E81B78B07C0053BB88 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6180A3E01B78B07C0053BB88 /* Info.plist */; };
 		61BD0BFF1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BD0BFE1A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.m */; };
 		D5307D17E03BABF39254808C /* libPods-MKPaginationTableViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF9E50F64A03388CDC026DA /* libPods-MKPaginationTableViewDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +39,7 @@
 		321FADDD6ED977477224B10B /* MKSchedulerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSchedulerFactory.h; sourceTree = "<group>"; };
 		321FADE68AC6D098733F29DD /* MKFetchItemsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFetchItemsManager.h; sourceTree = "<group>"; };
 		32878FA7232312C3F0386E66 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		61205CAF1B79E4CA0098E39C /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Tests-Prefix.pch"; path = "SupportingFiles/Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6180A3D11B78B07C0053BB88 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6180A3D21B78B07C0053BB88 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6180A3D31B78B07C0053BB88 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -212,6 +212,7 @@
 		61BD0BFC1A30DBCC008B5EC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61205CAF1B79E4CA0098E39C /* Tests-Prefix.pch */,
 				61BD0BFD1A30DBCC008B5EC2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -276,7 +277,7 @@
 		61BD0BD71A30DBCC008B5EC2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Mateusz Kuznik";
 				TargetAttributes = {
 					61BD0BDE1A30DBCC008B5EC2 = {
@@ -312,7 +313,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6180A3E81B78B07C0053BB88 /* Info.plist in Resources */,
 				6180A3E71B78B07C0053BB88 /* Images.xcassets in Resources */,
 				6180A3E21B78B07C0053BB88 /* LaunchScreen.xib in Resources */,
 				6180A3E31B78B07C0053BB88 /* Main.storyboard in Resources */,
@@ -445,6 +445,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -511,6 +512,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MKPaginationTableViewDemo/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "matku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -525,6 +527,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MKPaginationTableViewDemo/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "matku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -538,12 +541,15 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/MKPaginationTableViewDemoTests/SupportingFiles/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MKPaginationTableViewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "matku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MKPaginationTableViewDemo.app/MKPaginationTableViewDemo";
 			};
@@ -558,8 +564,11 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$PROJECT_DIR/MKPaginationTableViewDemoTests/SupportingFiles/Tests-Prefix.pch";
 				INFOPLIST_FILE = MKPaginationTableViewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "matku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MKPaginationTableViewDemo.app/MKPaginationTableViewDemo";
 			};

@@ -1,0 +1,26 @@
+//
+//  Tests-Prefix.pch
+//  MKPaginationTableViewDemo
+//
+//  Created by Mateusz Kuźnik on 11/08/15.
+//  Copyright (c) 2015 Mateusz Kuznik. All rights reserved.
+//
+
+#ifndef MKPaginationTableViewDemo_Tests_Prefix_pch
+#define MKPaginationTableViewDemo_Tests_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define HC_SHORTHAND
+
+#import <OCHamcrest/OCHamcrest.h>
+
+#define MOCKITO_SHORTHAND
+
+#import <OCMockito/OCMockito.h>
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
+#endif
