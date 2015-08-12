@@ -6,9 +6,6 @@
 //  Copyright (c) 2014 Mateusz Kuznik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
-
 @interface MKPaginationTableViewDemoTests : XCTestCase
 
 @end

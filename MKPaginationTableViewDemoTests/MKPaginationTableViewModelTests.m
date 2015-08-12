@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Mateusz Kuznik. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "MKPaginationTableViewModel.h"
 #import "MKFetchItemsManager.h"
 

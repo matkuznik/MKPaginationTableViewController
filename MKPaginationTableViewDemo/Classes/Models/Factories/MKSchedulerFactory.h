@@ -7,5 +7,7 @@
 
 
 @interface MKSchedulerFactory : NSObject
+
 - (RACScheduler *)fetchScheduler;
+
 @end

@@ -22,5 +22,7 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
+#import <XCTest/XCTest.h>
+#import <Expecta/Expecta.h>
 
 #endif

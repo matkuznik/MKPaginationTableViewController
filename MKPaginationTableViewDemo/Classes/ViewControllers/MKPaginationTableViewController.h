@@ -11,6 +11,4 @@
 
 @interface MKPaginationTableViewController : UITableViewController
 
-- (void)setupViewModel:(MKPaginationTableViewModel *)viewModel;
-
 @end

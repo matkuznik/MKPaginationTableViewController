@@ -32,7 +32,7 @@ NSUInteger newItemsCount = 10;
 }
 
 - (RACSignal *)fetchItems {
-    return [[[RACSignal return:[self fetchItemsMock]] delay:5.f] subscribeOn:[self.schedulerFactory fetchScheduler]];
+    return [[[RACSignal return:[self fetchItemsMock]] delay:2.f] subscribeOn:[self.schedulerFactory fetchScheduler]];
 }
 
 @end
