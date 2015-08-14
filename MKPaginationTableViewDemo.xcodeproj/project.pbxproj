@@ -54,7 +54,7 @@
 		6180A3DB1B78B07C0053BB88 /* MKPaginationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPaginationTableViewController.m; sourceTree = "<group>"; };
 		6180A3DC1B78B07C0053BB88 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6180A3DE1B78B07C0053BB88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6180A3E01B78B07C0053BB88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6180A3E01B78B07C0053BB88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MKPaginationTableViewDemo/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 		6180A3EC1B78B9D40053BB88 /* MKPaginationTableViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKPaginationTableViewDemo-Prefix.pch"; sourceTree = "<group>"; };
 		61BD0BDF1A30DBCC008B5EC2 /* MKPaginationTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKPaginationTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD0BF81A30DBCC008B5EC2 /* MKPaginationTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKPaginationTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
