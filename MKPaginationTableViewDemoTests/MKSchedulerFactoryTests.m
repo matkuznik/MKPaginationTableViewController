@@ -14,7 +14,6 @@
 
 @implementation MKSchedulerFactoryTests {
     MKSchedulerFactory *sut;
-
 }
 
 - (void)setUp {

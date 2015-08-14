@@ -9,8 +9,11 @@
 #import "MKFetchItemsManager.h"
 #import "MKSchedulerFactory.h"
 
-@interface MKFetchItemsManagerTests : XCTestCase
+@interface MKFetchItemsManager (UnitTests)
+- (void)setSchedulerFactory:(MKSchedulerFactory *)schedulerFactory;
+@end
 
+@interface MKFetchItemsManagerTests : XCTestCase
 @end
 
 @implementation MKFetchItemsManagerTests {
@@ -22,7 +25,7 @@
     [super setUp];
     sut = [[MKFetchItemsManager alloc] init];
     schedulerFactoryMock = [[MKSchedulerFactory alloc] init];
-    [sut performSelector:@selector(setSchedulerFactory:) withObject:schedulerFactoryMock];
+    [sut setSchedulerFactory:schedulerFactoryMock];
 }
 
 - (void)tearDown {

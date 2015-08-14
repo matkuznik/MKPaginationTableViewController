@@ -9,8 +9,14 @@
 #import "MKPaginationTableViewModel.h"
 #import "MKFetchItemsManager.h"
 
-@interface MKPaginationTableViewModelTests : XCTestCase
 
+@interface MKPaginationTableViewModel (UnitTests)
+
+- (void)setFetchItemsManager:(MKFetchItemsManager *)test;
+
+@end
+
+@interface MKPaginationTableViewModelTests : XCTestCase
 @end
 
 @implementation MKPaginationTableViewModelTests {
@@ -22,7 +28,7 @@
     [super setUp];
     fetchItemsManagerMock = mock([MKFetchItemsManager class]);
     sut = [[MKPaginationTableViewModel alloc] init];
-    [sut performSelector:@selector(setFetchItemsManager:) withObject:fetchItemsManagerMock];
+    [sut setFetchItemsManager:fetchItemsManagerMock];
 }
 
 - (void)tearDown {
@@ -43,4 +49,5 @@
     [sut loadMoreItems];
     assertThat([sut textForRowAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0]], is(equalTo(@"3")));
 }
+
 @end
